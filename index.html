@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERO SWAG</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
+    z-index:100;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,12vw,10rem);
+    font-weight:900;
+    letter-spacing:8px;
+}
+
+.hero p{
+    margin-top:20px;
+    color:#aaa;
+    max-width:600px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    background:white;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.section{
+    padding:100px 8%;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #222;
+    overflow:hidden;
+}
+
+.product-image{
+    height:320px;
+    background:linear-gradient(135deg,#222,#444);
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#999;
+    margin-top:10px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.about-text{
+    color:#bbb;
+    line-height:1.8;
+}
+
+footer{
+    text-align:center;
+    padding:50px;
+    border-top:1px solid #222;
+    color:#777;
+}
+
+@media(max-width:768px){
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        padding:20px;
+    }
+
+    nav a{
+        margin-left:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">ZERO SWAG</div>
+
+    <div>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>ZERO SWAG</h1>
+
+    <p>
+        Clothing for people who don't need validation.
+        Minimal. Clean. Loud without shouting.
+    </p>
+
+    <button class="btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+        SHOP NOW
+    </button>
+</section>
+
+<section id="shop" class="section">
+
+    <h2 class="section-title">Featured Pieces</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <div class="product-image"></div>
+
+            <div class="card-content">
+                <h3>ZERO SWAG TEE</h3>
+                <p>Heavyweight black tee.</p>
+                <div class="price">$35</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="product-image"></div>
+
+            <div class="card-content">
+                <h3>ZERO SWAG HOODIE</h3>
+                <p>Oversized fit.</p>
+                <div class="price">$65</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="product-image"></div>
+
+            <div class="card-content">
+                <h3>ZERO SWAG CAP</h3>
+                <p>Simple embroidery.</p>
+                <div class="price">$25</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="about" class="section">
+
+    <h2 class="section-title">About</h2>
+
+    <div class="about">
+
+        <div>
+            <h3>Less Hype. More Identity.</h3>
+        </div>
+
+        <div class="about-text">
+            Zero Swag is built around the idea that confidence
+            doesn't come from logos or trends. Wear what you
+            like. Build what you believe in. Stay authentic.
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 ZERO SWAG
+</footer>
+
+</body>
+</html>
