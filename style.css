@@ -10,7 +10,7 @@
     }
     
     body{
-    font-family:'Inter',sans-serif;
+    font-family:'Saira',sans-serif;
     background:#000;
     color:#fff;
     }
@@ -73,7 +73,11 @@
     
     padding:0 8%;
     
-    
+    background-image: url('assets/hero-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     }
     
     .eyebrow{
@@ -274,3 +278,8 @@
     
     }
     
+    .email-input{
+      font-family:'Saira',sans-serif;
+      background:#000;
+      color:#fff;
+    }
